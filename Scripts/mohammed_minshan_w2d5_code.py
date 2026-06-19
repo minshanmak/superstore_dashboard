@@ -15,7 +15,7 @@ st.set_page_config(
 @st.cache_data(ttl=600)
 def load_data():
     df = pd.read_csv(
-        r"C:\Users\minsh\Desktop\OJT 2 sem\Project_4.1\Output\samplesuperstore_clean.csv",
+        r"Output/samplesuperstore_clean.csv",
         parse_dates=["order_date", "ship_date"]
     )
     return df.rename(columns={"sub-category": "sub_category"})
